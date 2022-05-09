@@ -9,9 +9,13 @@ class World {
     this.scene = createScene();
     this.camera = createCamera(container.clientWidth / container.clientHeight);
     this.renderer = createRenderer();
+    container.append(this.renderer.domElement);
   }
   // 2. Render the scene
-  render() {}
+  render() {
+    // draw a single frame
+    this.renderer.render(this.scene, this.camera);
+  }
 }
 
 export default World;
