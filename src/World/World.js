@@ -8,7 +8,7 @@ class World {
     this.sceneContainer = container;
     this.scene = createScene();
     this.camera = createCamera(container.clientWidth / container.clientHeight);
-    this.render = createRenderer();
+    this.renderer = createRenderer();
   }
   // 2. Render the scene
   render() {}
