@@ -6,7 +6,7 @@ class World {
   constructor(container) {
     this.sceneContainer = container;
     this.scene = createScene();
-    this.camera = createCamera();
+    this.camera = createCamera(container.clientWidth / container.clientHeight);
   }
   // 2. Render the scene
   render() {}
