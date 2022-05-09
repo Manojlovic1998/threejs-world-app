@@ -1,7 +1,9 @@
-import { Scene } from "../../../vendor/three/build/three.module";
+import { Scene, Color } from "../../../vendor/three/build/three.module.js";
 
 export const createScene = (color = "#000000") => {
   const scene = new Scene();
-  scene.background.set(color);
+  // Set scene background color
+  scene.background = new Color(color);
+
   return scene;
 };
