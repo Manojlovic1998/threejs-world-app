@@ -4,7 +4,7 @@ Goal of this project is to create a component that can be dropped into any web a
 
 ## Workflow
 
-**Non-model approach (aka implementation details)**
+**Non-model approach (aka. implementation details)**
 
 1. Initial Setup
 2. Create the scene
@@ -13,7 +13,7 @@ Goal of this project is to create a component that can be dropped into any web a
 5. Create the renderer
 6. Render the scene
 
-**Using World Class**
+**Using World Class (interface)**
 
 1. Create an instance of the World app
 2. Render the scene
