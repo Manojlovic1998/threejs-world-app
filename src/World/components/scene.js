@@ -1,5 +1,7 @@
 import { Scene } from "../../../vendor/three/build/three.module";
 
-export const createScene = () => {
-  return new Scene();
+export const createScene = (color = "#000000") => {
+  const scene = new Scene();
+  scene.background.set(color);
+  return scene;
 };
