@@ -1,3 +1,4 @@
+import { createCamera } from "./components/camera.js";
 import { createScene } from "./components/scene.js";
 
 class World {
@@ -5,6 +6,7 @@ class World {
   constructor(container) {
     this.sceneContainer = container;
     this.scene = createScene();
+    this.camera = createCamera();
   }
   // 2. Render the scene
   render() {}
