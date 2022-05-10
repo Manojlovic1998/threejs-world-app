@@ -18,9 +18,23 @@ class World {
       const cube = createCube();
       this.scene.add(cube);
     }
-
     // draw a single frame
     this.renderer.render(this.scene, this.camera);
+  }
+
+  // Resize
+  resize(container) {
+    // Set the camera's aspect ratio
+    this.camera.aspect = container.clientWidth / container.clientHeight;
+
+    // update the camera's frustum
+    this.camera.updateProjectionMatrix();
+
+    // update the size of the render AND the canvas
+    this.renderer.setSize(container.clientWidth, container.clientHeight);
+
+    // set the pixel ratio (for mobile devices)
+    this.renderer.setPixelRatio(window.devicePixelRatio);
   }
 }
 
