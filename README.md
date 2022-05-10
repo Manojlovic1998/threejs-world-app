@@ -26,4 +26,12 @@ PBR uses a real-world physics to calculate the way surfaces react to light.
 
 Three.js allows us to use the same physically correct rendering techniques. Furthermore, Three.js also allows us to run these in browser and on low-power devices such as smartphones.
 
-The most important three.js PBR material s the `MeshStandardMaterial`.
+The most important three.js PBR material is the `MeshStandardMaterial`.
+
+### Lighting & Materials
+
+Lighting and materials are intrinsically linked in computer graphics rendering systems. When working with any type of PBR we will need to also add light to the scene.
+
+Three.js provides us with the `DirectionalLight`, this type of light mimics the rays from a faraway light source, for example like the sun.
+
+Note: The `MeshBasicMaterial` does is not PBR and does not require a light.
