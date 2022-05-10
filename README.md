@@ -34,4 +34,23 @@ Lighting and materials are intrinsically linked in computer graphics rendering s
 
 Three.js provides us with the `DirectionalLight`, this type of light mimics the rays from a faraway light source, for example like the sun.
 
-Note: The `MeshBasicMaterial` does is not PBR and does not require a light.
+Note: The `MeshBasicMaterial` is not PBR and does not require a light.
+
+_Physically Correct Lighting_ is not the same thing as PBR. However, it makes sense to use both together for a complete physically accurate scene.
+
+_Physically Correct Lighting_ means calculating how light fades with distance from a light source using real-world physics equations.
+
+_Physically based rendering_ involves calculating in a physically correct manner, how light reacts with surfaces.
+
+Thankfully we don't have to write these equations as they are already implemented into three.js lib.
+
+```JavaScript
+    import { WebGLRenderer() } from "three";
+
+    const renderer = new WebGLRenderer();
+
+    // Turn on the physically correct light model
+    renderer.physicallyCorrectLights = true;
+```
+
+Note: It is disabled by default to maintain backwards compatibility. Furthermore, there are few more things that need to be configured in order to get the colors and lighting to work in a physically correct manner.
