@@ -1,4 +1,4 @@
-import World from "./World/World";
+import World from "./World/World.js";
 
 const main = () => {
   // Scene wrapper container
@@ -10,3 +10,5 @@ const main = () => {
   // 2. Rendeer the scene
   world.render();
 };
+
+main();
