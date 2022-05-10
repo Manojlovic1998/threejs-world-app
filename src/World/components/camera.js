@@ -1,4 +1,4 @@
-import { PerspectiveCamera } from "../../../vendor/three/build/three.module";
+import { PerspectiveCamera } from "../../../vendor/three/build/three.module.js";
 
 export const createCamera = (
   aspect,
