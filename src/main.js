@@ -7,7 +7,8 @@ const main = () => {
   // 1. Create an instance of the World app
   const world = new World(container);
 
-  // 2. Rendeer the scene
+  // 2. Renderer the scene
+  world.resize(container);
   world.render("cube");
 };
 
