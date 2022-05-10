@@ -45,7 +45,7 @@ _Physically based rendering_ involves calculating in a physically correct manner
 Thankfully we don't have to write these equations as they are already implemented into three.js lib.
 
 ```JavaScript
-    import { WebGLRenderer() } from "three";
+    import { WebGLRenderer } from "three";
 
     const renderer = new WebGLRenderer();
 
