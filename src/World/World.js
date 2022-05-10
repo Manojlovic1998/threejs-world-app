@@ -5,11 +5,11 @@ import { createCube } from "./components/cube/cube.js";
 
 class World {
   // 1. Create an instance of the World app
-  constructor(container) {
+  constructor(container, options = { phyCorrectLights: false }) {
     this.sceneContainer = container;
     this.scene = createScene();
     this.camera = createCamera(container.clientWidth / container.clientHeight);
-    this.renderer = createRenderer();
+    this.renderer = createRenderer(options);
     container.append(this.renderer.domElement);
   }
   // 2. Render the scene
