@@ -17,3 +17,13 @@ Goal of this project is to create a component that can be dropped into any web a
 
 1. Create an instance of the World app
 2. Render the scene
+
+## Physically Based Rendering and Lighting
+
+PBR has become the industry-standard method of rendering both real-time and cinematic 3D scenes.
+
+PBR uses a real-world physics to calculate the way surfaces react to light.
+
+Three.js allows us to use the same physically correct rendering techniques. Furthermore, Three.js also allows us to run these in browser and on low-power devices such as smartphones.
+
+The most important three.js PBR material s the `MeshStandardMaterial`.
