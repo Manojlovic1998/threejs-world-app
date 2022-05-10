@@ -84,3 +84,24 @@ The light classes in the three.js are split into two types:
 Note: Indirect light is hard to simulate because device needs to calculate an infinite number of light rays bouncing forever from all the surfaces in the scene. No computer is powerful enough to do that today, even if we limit the number of rays to few thousand with each making just couple of bounces (aka. raytracing), it will still take too long to calculate it all in the real-time. Therefore, we need a way to fake indirect light.
 
 There are several ways for faking indirect light in three.js such as: ambient light, image-based lighting (IBL) and light probes.
+
+### Direct Lighting
+
+There are total of four direct light types available in the three.js core, each of which simulates a common real-world source of light:
+
+- `DirectionalLight` => Sunlight
+- `PointLight` => Light Bulbs
+- `RectAreaLight` => Strip lighting or bright windows
+- `SpotLight` => Spotlight
+
+Directional light was designed to mimic a distance source of light such as the sun. Light rays from a directional light don't fade with distance.
+
+The light rays of directional light are parallel and shine from a position and towards a target.
+
+### Shadows
+
+Even when using PBR, objects don't block light, by default in three.js. Every object in path will receive illumination, even if there is a wall in the way.
+
+Shadows have to be manually enabled, object by object, and light by light. Important to note is that shadows are expensive, so you usually only enable shadows for one light or two lights, especially if your scene needs to work on mobile devices.
+
+Note: _Only direct light types can cast shadows, ambient lights cannot._
