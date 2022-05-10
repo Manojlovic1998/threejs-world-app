@@ -68,3 +68,19 @@ For physically correct lighting to be accurate you need to build physically size
 _Using meters is a convention rather than a rule. If you don't follow it, everything except for physically accurate lighting will still work._
 
 Note: There is exception for when you are building a huge-scale space scenes then you might decide to use a unit of measurement that is bigger than 1m.
+
+### Lighting in Three.js
+
+Objects receive the light in two ways:
+
+1. _Directional lighting_: light rays that come directly from the light source and hit an object.
+2. _Indirect lighting_: light rays that have bounced off the walls and other objects in the room before hitting an object, changing color, and losing intensity with each bounce.
+
+The light classes in the three.js are split into two types:
+
+1. _Direct lights_, which simulate direct lighting.
+2. _Ambient lights_, which are cheep and somewhat believable way of faking indirect light.
+
+Note: Indirect light is hard to simulate because device needs to calculate an infinite number of light rays bouncing forever from all the surfaces in the scene. No computer is powerful enough to do that today, even if we limit the number of rays to few thousand with each making just couple of bounces (aka. raytracing), it will still take too long to calculate it all in the real-time. Therefore, we need a way to fake indirect light.
+
+There are several ways for faking indirect light in three.js such as: ambient light, image-based lighting (IBL) and light probes.
