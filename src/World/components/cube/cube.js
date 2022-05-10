@@ -2,8 +2,7 @@ import {
   BoxBufferGeometry,
   Mesh,
   MeshBasicMaterial,
-  MeshBasicMaterial,
-} from "../../../../vendor/three/build/three.module";
+} from "../../../../vendor/three/build/three.module.js";
 
 export const createCube = () => {
   // create a geometry
