@@ -54,3 +54,17 @@ Thankfully we don't have to write these equations as they are already implemente
 ```
 
 Note: It is disabled by default to maintain backwards compatibility. Furthermore, there are few more things that need to be configured in order to get the colors and lighting to work in a physically correct manner.
+
+### Importance of Physically Sized Scenes
+
+For physically correct lighting to be accurate you need to build physically sized scenes. This way the light obj will interact with the scene in an accurate manner.
+
+**Units of size in three.js are meters**
+
+- The 2 x 2 x 2 cube is two meters long on each side.
+- `camera.far = 100` means that you can see for a distance of one hundred meters.
+- _1 unit = 1 meter_
+
+_Using meters is a convention rather than a rule. If you don't follow it, everything except for physically accurate lighting will still work._
+
+Note: There is exception for when you are building a huge-scale space scenes then you might decide to use a unit of measurement that is bigger than 1m.
