@@ -8,7 +8,7 @@ const main = () => {
   const world = new World(container);
 
   // 2. Rendeer the scene
-  world.render();
+  world.render("cube");
 };
 
 main();
