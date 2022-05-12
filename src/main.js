@@ -7,6 +7,7 @@ const main = () => {
   // World configuration
   let worldConfig = {
     phyCorrectLights: true,
+    material: "standard",
   };
   // 1. Create an instance of the World app
   const world = new World(container, worldConfig);
