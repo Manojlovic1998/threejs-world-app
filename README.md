@@ -147,3 +147,15 @@ const spec = {
 
 const material = new MeshStandardMaterial(spec)
 ```
+
+### Translation
+
+The technical term for moving objects around is _transformation_.
+
+_Translation_, _rotation_, and _scaling_ (_TRS_) are the three fundamental transformations for positioning objects in the 3D space.
+
+Adjusting the rotation of an object works the same as setting position.
+
+```JavaScript
+cube.rotation.set(-0.5, -0.1, 0.8);
+```
