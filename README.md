@@ -105,3 +105,27 @@ Even when using PBR, objects don't block light, by default in three.js. Every ob
 Shadows have to be manually enabled, object by object, and light by light. Important to note is that shadows are expensive, so you usually only enable shadows for one light or two lights, especially if your scene needs to work on mobile devices.
 
 Note: _Only direct light types can cast shadows, ambient lights cannot._
+
+### Three.js Directional Light
+
+Three.js's `DirectionalLight` was designed to mimic a distance source of light, such as sun. Light rays from a `DirectionalLight` don't fade with distance.
+
+**All objects in the scene will be illuminated equally brightly no matter where they are placed. (even behind the light)**
+
+**The light rays of a `DirectionalLight` are parallel and shine _from_ position and _towards_ the target.**
+
+The `DirectionalLight` constructor takes two parameters, _color_ and _intensity_
+
+```JavaScript
+import {DirectionalLight} from "three";
+
+const light = DirectionalLight("red", 8);
+```
+
+The `DirectionalLight` shines from `light.position`,to `light.target.position`.
+
+```JavaScript
+light.position.set(10, 10, 10);
+```
+
+_Now it is shining from (10, 10, 10) towards position (0, 0, 0)_
