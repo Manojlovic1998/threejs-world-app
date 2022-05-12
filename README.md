@@ -129,3 +129,21 @@ light.position.set(10, 10, 10);
 ```
 
 _Now it is shining from (10, 10, 10) towards position (0, 0, 0)_
+
+### Materials
+
+All three.js materials, inherit from the `Material` base class. Therefore, a lot of the same settings can be found across different materials.
+
+You can't use `Material` directly. Instead, you must always use one of the derived classes like `MeshStandardMaterial` or `MeshBasicMaterial`.
+
+`MeshStandardMaterial` accepts an object as parameter to which you can pass spec. of the material you are instantiating.
+
+```JavaScript
+import {MeshStandardMaterial} from "three";
+
+const spec = {
+    color: 'purple',
+}
+
+const material = new MeshStandardMaterial(spec)
+```
