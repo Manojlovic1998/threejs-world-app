@@ -148,7 +148,7 @@ const spec = {
 const material = new MeshStandardMaterial(spec)
 ```
 
-### Translation
+### Transformation
 
 The technical term for moving objects around is _transformation_.
 
