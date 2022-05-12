@@ -8,6 +8,11 @@ const main = () => {
   let worldConfig = {
     phyCorrectLights: true,
     material: "standard",
+    cube: {
+      transformation: {
+        rotation: { x: -0.5, y: -0.1, z: 0.8 },
+      },
+    },
   };
   // 1. Create an instance of the World app
   const world = new World(container, worldConfig);
